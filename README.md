@@ -1,4 +1,4 @@
-# OMS Coding Challenge.
+# OMS Coding Challenge
 
 Welcome to the OMS coding challenge for .net developers. This challenge is intended to be undertaken real time during your technical interview with the team. Prior to your interview you will be given access details for a VM. The VM will have the repository cloned and Visual Studio installed ready to go.
 
@@ -12,7 +12,7 @@ The OMS team are on a virtual tour of the UK. This 1,786km tour takes in many of
 
 You will be contributing towards a web API for collecting and reporting on data from the tour.
 
-The API is a .net 5 Web Api using EF Core, an SQLite database and Xunit.
+The API is a .net 5 Web Api using EF Core, a SQLite database and Xunit.
 
 There are a number of TODOs throughout the code. They are numbered but it is not mandatory to complete all of them or stick strictly to the order (although in some cases they refer back to a previous item).
 
