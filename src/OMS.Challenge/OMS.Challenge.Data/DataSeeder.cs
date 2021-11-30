@@ -40,20 +40,20 @@ namespace OMS.Challenge.Data
         {
             var activities = new List<Activity>()
             {
-                new () { Id = 1, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 11, 01), Distance = 5.5m },
-                new () { Id = 2, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 11, 02), Distance = 5.9m },
-                new () { Id = 3, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 12, 03), Distance = 5.6m },
-                new () { Id = 4, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 12, 04), Distance = 5.6m },
+                new () { Id = 1, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 11, 01), Distance = 5.5 },
+                new () { Id = 2, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 11, 02), Distance = 5.9 },
+                new () { Id = 3, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 12, 03), Distance = 5.6 },
+                new () { Id = 4, EmployeeId = 1, ActivityTypeId = 2,  ActivityDate = new DateTime(2021, 12, 04), Distance = 5.6 },
 
-                new () { Id = 5, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 01), Distance = 16.8m },
-                new () { Id = 6, EmployeeId = 2, ActivityTypeId = 4,  ActivityDate = new DateTime(2021, 12, 02), Distance = 10m },
-                new () { Id = 7, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 03), Distance = 16.5m },
-                new () { Id = 8, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 04), Distance = 16.5m },
-                new () { Id = 9, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 05), Distance = 16.9m },
+                new () { Id = 5, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 01), Distance = 16.8 },
+                new () { Id = 6, EmployeeId = 2, ActivityTypeId = 4,  ActivityDate = new DateTime(2021, 12, 02), Distance = 10 },
+                new () { Id = 7, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 03), Distance = 16.5 },
+                new () { Id = 8, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 04), Distance = 16.5 },
+                new () { Id = 9, EmployeeId = 2, ActivityTypeId = 3,  ActivityDate = new DateTime(2021, 12, 05), Distance = 16.9 },
 
-                new () { Id = 10, EmployeeId = 3, ActivityTypeId = 4,  ActivityDate = new DateTime(2021, 12, 01), Distance = 1m },
-                new () { Id = 11, EmployeeId = 3, ActivityTypeId = 4,  ActivityDate = new DateTime(2021, 12, 02), Distance = 1.1m },
-                new () { Id = 12, EmployeeId = 3, ActivityTypeId = 6,  ActivityDate = new DateTime(2021, 12, 02), Distance = 8m },
+                new () { Id = 10, EmployeeId = 3, ActivityTypeId = 4,  ActivityDate = new DateTime(2021, 12, 01), Distance = 1 },
+                new () { Id = 11, EmployeeId = 3, ActivityTypeId = 4,  ActivityDate = new DateTime(2021, 12, 02), Distance = 1.1 },
+                new () { Id = 12, EmployeeId = 3, ActivityTypeId = 6,  ActivityDate = new DateTime(2021, 12, 02), Distance = 8 },
 
             };
 

@@ -42,7 +42,7 @@ namespace OMS.Challenge.Api.Controllers
         [HttpGet("TotalDistance")]
         public async Task<IActionResult> GetTotalDistance()
         {
-            decimal totalDistance = await new ActivityQueries(_dbContextFactory.CreateDbContext()).GetTotalDistance();
+            double totalDistance = await new ActivityQueries(_dbContextFactory.CreateDbContext()).GetTotalDistance();
 
             return new JsonResult(totalDistance);
         }

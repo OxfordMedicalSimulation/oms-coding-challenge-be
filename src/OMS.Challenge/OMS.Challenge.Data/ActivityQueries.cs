@@ -18,7 +18,7 @@ namespace OMS.Challenge.Data
             _dbContext = dbContext;
         }
 
-        public async Task<decimal> GetTotalDistance()
+        public async Task<double> GetTotalDistance()
         {
             //TODO: 1. Calculate the total distance covered by all activities and return
             return 0;

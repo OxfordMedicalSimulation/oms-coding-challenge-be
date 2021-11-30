@@ -10,12 +10,12 @@ using Xunit;
 
 namespace OMS.Challenge.Tests.ExtensionMethodTests
 {
-    public class DecimalExtensionMethodTests
+    public class DoubleExtensionMethodTests
     {
         [Fact]
         public void ConvertMilesToKm_5Miles_ShouldBe8Km()
         {
-            //TODO: 8. Write a unit test to check the conversion works. The conversion code is an extension method for decimal "ConvertMilesToKm"
+            //TODO: 8. Write a unit test to check the conversion works. The conversion code is an extension method for double "ConvertMilesToKm"
         }
     }
 }

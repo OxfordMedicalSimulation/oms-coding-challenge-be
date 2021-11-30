@@ -15,14 +15,14 @@ namespace OMS.Challenge.Core.Entities
 
         public int EmployeeId { get; set; }
 
-        public int ActivityTypeId { get; set; }
+        public byte ActivityTypeId { get; set; }
 
         public DateTime ActivityDate { get; set; }
 
         /// <summary>
         /// The distance traveled in km
         /// </summary>
-        public decimal Distance { get; set; }
+        public double Distance { get; set; }
 
         //Navigation Properties
         public Employee Employee { get; set; }
