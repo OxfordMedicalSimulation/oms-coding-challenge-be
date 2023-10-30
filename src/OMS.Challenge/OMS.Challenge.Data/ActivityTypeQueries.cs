@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OMS.Challenge.Core.Entities;
+using OMS.Challenge.Core.Interfaces.Queries;
 
-namespace OMS.Challenge.Data
+namespace OMS.Challenge.Data;
+
+public class ActivityTypeQueries : IActivityTypeQueries
 {
-    public class ActivityTypeQueries
+    private readonly OMSChallengeContext _dbContext;
+
+    public ActivityTypeQueries(OMSChallengeContext dbContext)
     {
-        private readonly IOMSChallengeContext _dbContext;
+        _dbContext = dbContext;
+    }
 
-        public ActivityTypeQueries(IOMSChallengeContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
-        public async Task<IEnumerable<ActivityType>> GetActivityTypes()
-        {
-            return await _dbContext.ActivityTypes.ToListAsync();
-        }
+    public async Task<IEnumerable<ActivityType>> GetActivityTypes()
+    {
+        return await _dbContext.ActivityTypes.ToListAsync();
     }
 }

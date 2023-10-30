@@ -1,16 +1,15 @@
-﻿namespace OMS.Challenge.Core.Entities
+﻿namespace OMS.Challenge.Core.Entities;
+
+public class Employee
 {
-    public class Employee
+    public int Id { get; set; }
+
+    public string FirstName { get; set; }
+
+    public string LastName { get; set; }
+
+    public override string ToString()
     {
-        public int Id { get; set; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
-        public override string ToString()
-        {
-            return $"{FirstName} {LastName}";
-        }
+        return $"{FirstName} {LastName}";
     }
 }

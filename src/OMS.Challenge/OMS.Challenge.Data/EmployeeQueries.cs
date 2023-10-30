@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OMS.Challenge.Core.Entities;
+using OMS.Challenge.Core.Interfaces.Queries;
 
-namespace OMS.Challenge.Data
+namespace OMS.Challenge.Data;
+
+public class EmployeeQueries : IEmployeeQueries
 {
-    public class EmployeeQueries
+    private readonly OMSChallengeContext _dbContext;
+
+    public EmployeeQueries(OMSChallengeContext dbContext)
     {
-        private readonly IOMSChallengeContext _dbContext;
+        _dbContext = dbContext;
+    }
 
-        public EmployeeQueries(IOMSChallengeContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
-        public async Task<IEnumerable<Employee>> GetEmployees()
-        {
-            return await _dbContext.Employees.ToListAsync();
-        }
+    public async Task<IEnumerable<Employee>> GetEmployees()
+    {
+        return await _dbContext.Employees.ToListAsync();
     }
 }
