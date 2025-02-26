@@ -1,8 +1,12 @@
 # OMS Coding Challenge
 
-Welcome to the OMS coding challenge for .net developers. This challenge is intended to be undertaken real time during your technical interview with the team. Prior to your interview you will be given access details for a VM. The VM will have the repository cloned and Visual Studio installed ready to go.
+Welcome to the OMS coding challenge for .net developers. This challenge is intended to be undertaken real time during your technical interview with the team.
 
-All candidates are free to clone the repository and take a look prior to their technical interview.
+All candidates are free to clone the repository and take a look prior to their technical interview. 
+
+During the interview you will be asked to share your screen and solve the TODOs, talking the team through it as you go.
+
+You are free to use the IDE of your choice (Rider, Visual Studio, etc).
 
 The purpose of the exercise is for candidates to show an understanding of .net development and to create some discussion points for your technical interview. It is considered an "open book" exercise so don't worry if you find yourself looking something up.
 
