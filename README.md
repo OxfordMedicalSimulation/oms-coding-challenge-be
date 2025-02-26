@@ -16,7 +16,7 @@ The OMS team are on a virtual tour of the UK. This 1,786km tour takes in many of
 
 You will be contributing towards a web API for collecting and reporting on data from the tour.
 
-The API is a .net 6 Web Api using EF Core, a SQLite database and Xunit.
+The API is a .net 8 Web Api using EF Core, a SQLite database and Xunit.
 
 There are a number of TODOs throughout the code. They are numbered but it is not mandatory to complete all of them or stick strictly to the order (although in some cases they refer back to a previous item).
 
