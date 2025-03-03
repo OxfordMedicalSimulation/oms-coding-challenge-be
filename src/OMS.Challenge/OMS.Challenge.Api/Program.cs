@@ -1,20 +1,16 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using OMS.Challenge.Api.Extensions;
 
-namespace OMS.Challenge.Api;
+var builder = WebApplication.CreateBuilder(args);
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        CreateHostBuilder(args).Build().Run();
-    }
+//TODO: 5. A penetration test has been conducted and we must remove the kestrel server header.
+builder.WebHost.ConfigureKestrel(_ => { });
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                //TODO: 5. A penetration test has been conducted and we must remove the kestrel server header.
-                webBuilder.UseStartup<Startup>();
-            });
-}
+builder.Services.ConfigureServices();
+
+var app = builder.Build();
+app.Configure(app.Environment);
+
+app.Services.RunMigrations();
+
+app.Run();
+
