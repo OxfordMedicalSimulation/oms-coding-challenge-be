@@ -26,7 +26,7 @@ public class EmployeeController : ControllerBase
     [HttpGet("GetById")]
     public async Task<IActionResult> GetById(int id)
     {
-        //TODO: 4. Get the record by Id. If no record exists for the specified Id then return a http 404
-        return new JsonResult(new Employee());
+        //TODO: 4. Get the record using the injected EmployeeService by Id. If no record exists for the specified Id then return a http 404
+        throw new NotImplementedException();
     }
 }

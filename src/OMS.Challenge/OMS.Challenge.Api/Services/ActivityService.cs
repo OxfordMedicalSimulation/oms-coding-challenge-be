@@ -10,10 +10,13 @@ namespace OMS.Challenge.Api.Services;
 public class ActivityService : IActivityService
 {
     private readonly OMSChallengeContext _dbContext;
+
+    private readonly IActivityQueries _activityQueries;
     
     public ActivityService(IActivityQueries activityQueries, OMSChallengeContext dbContext)
     {
         _dbContext = dbContext;
+        _activityQueries = activityQueries;
     }
 
     public Task<double> GetTotalDistance()
