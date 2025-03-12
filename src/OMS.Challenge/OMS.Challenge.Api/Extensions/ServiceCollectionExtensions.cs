@@ -25,7 +25,6 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IActivityTypeQueries, ActivityTypeQueries>();
         services.AddScoped<IActivityQueries, ActivityQueries>();
         
-        services.AddScoped<IEmployeeService, EmployeeService>();
         services.AddScoped<IActivityTypeService, ActivityTypeService>();
         services.AddScoped<IActivityService, ActivityService>();
     }
