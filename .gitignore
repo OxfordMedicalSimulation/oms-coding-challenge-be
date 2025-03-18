@@ -60,3 +60,7 @@ TestResults
 builds
 
 *.DotSettings.user
+
+*.db
+*.db-shm
+*.db-wal
