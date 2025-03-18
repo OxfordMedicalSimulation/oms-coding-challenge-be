@@ -8,4 +8,6 @@ public interface IActivityQueries
     Task<double> GetTotalDistance();
 
     Task<Employee> GetMostActiveEmployee();
+
+    Task<Activity> CreateAsync(Activity activity);
 }
