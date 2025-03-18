@@ -12,7 +12,12 @@ public static class ServiceCollectionExtensions
     // This method gets called by the runtime. Use this method to add services to the container.
     public static void ConfigureServices(this IServiceCollection services)
     {
-        services.AddControllers();
+        services.AddControllers(options =>
+        {
+            options.RespectBrowserAcceptHeader = true;
+        })
+        .AddXmlSerializerFormatters();
+        
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "OMS.Challenge.Api", Version = "v1" });

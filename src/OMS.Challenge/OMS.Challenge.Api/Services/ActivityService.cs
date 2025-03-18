@@ -1,32 +1,27 @@
-﻿using System.Threading.Tasks;
-using OMS.Challenge.Core.Entities;
+﻿using OMS.Challenge.Core.Entities;
 using OMS.Challenge.Core.Interfaces.Queries;
 using OMS.Challenge.Core.Interfaces.Services;
 using OMS.Challenge.Core.Models;
-using OMS.Challenge.Data;
 
 namespace OMS.Challenge.Api.Services;
 
 public class ActivityService : IActivityService
 {
-    private readonly OMSChallengeContext _dbContext;
-
     private readonly IActivityQueries _activityQueries;
     
-    public ActivityService(IActivityQueries activityQueries, OMSChallengeContext dbContext)
+    public ActivityService(IActivityQueries activityQueries)
     {
-        _dbContext = dbContext;
         _activityQueries = activityQueries;
     }
 
     public Task<double> GetTotalDistance()
     {
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
 
     public Task<Employee> GetMostActiveEmployee()
     {
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
 
     public async Task<Activity> Create(CreateActivityRequest request)
@@ -38,11 +33,7 @@ public class ActivityService : IActivityService
             ActivityDate = request.ActivityDate,
             Distance = request.Distance
         };
-
-        await _dbContext.Activities.AddAsync(activity);
-
-        await _dbContext.SaveChangesAsync();
-
-        return activity;
+        
+        return await _activityQueries.CreateAsync(activity);
     }
 }

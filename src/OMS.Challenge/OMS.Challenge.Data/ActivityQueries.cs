@@ -25,4 +25,13 @@ public class ActivityQueries : IActivityQueries
         //For the purposes of the activity if two employees have the same number of activities recorded just return the first one
         return null;
     }
+
+    public async Task<Activity> CreateAsync(Activity activity)
+    {
+        await _dbContext.Activities.AddAsync(activity);
+
+        await _dbContext.SaveChangesAsync();
+
+        return activity;
+    }
 }
