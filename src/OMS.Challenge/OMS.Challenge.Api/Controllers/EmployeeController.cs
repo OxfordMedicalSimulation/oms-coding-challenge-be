@@ -20,7 +20,7 @@ public class EmployeeController : ControllerBase
     public async Task<IActionResult> Get()
     {
         var employees = await _employeeService.GetEmployees();
-        return new JsonResult(employees);
+        return Ok(employees);
     }
 
     [HttpGet("GetById")]

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 using OMS.Challenge.Core.Entities;
@@ -12,7 +12,7 @@ namespace OMS.Challenge.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ActivityController
+public class ActivityController : ControllerBase
 {
     private readonly IActivityService _activityService;
 
@@ -28,7 +28,7 @@ public class ActivityController
 
         //TODO: 3. Get all activities in a flattened model including the name of the employee, activity title etc ordered by activity date (most recent first)
 
-        return new JsonResult(activities);
+        return Ok(activities);
     }
 
     [HttpGet("MostActiveEmployee")]
@@ -36,7 +36,7 @@ public class ActivityController
     {
         var employee = await _activityService.GetMostActiveEmployee();
 
-        return new JsonResult(employee);
+        return Ok(employee);
     }
 
     [HttpGet("TotalDistance")]
@@ -44,7 +44,7 @@ public class ActivityController
     {
         double totalDistance = await _activityService.GetTotalDistance();
 
-        return new JsonResult(totalDistance);
+        return Ok(totalDistance);
     }
 
     /// <summary>
@@ -55,6 +55,6 @@ public class ActivityController
     {
         Activity activity = await _activityService.Create(request);
 
-        return new JsonResult(activity);
+        return Ok(activity);
     }
 }
